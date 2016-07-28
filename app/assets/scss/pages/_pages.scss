@@ -1,0 +1,21 @@
+/* PAGE's */
+// Настройка страниц
+/*-------------------------------------*/
+/* -- Page's: Headline -- */
+.page_headline {
+  margin-bottom: 25px;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+/* -- Page's: Index -- */
+#indexPage {
+  .gl-content__panel {
+    .gl-container {
+      max-width: $width_container;
+      padding: 0 50px;
+    }
+  }
+}

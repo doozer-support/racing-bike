@@ -1,0 +1,520 @@
+/* COMPONENT's */
+// Настройка Компонентов
+/*-------------------------------------*/
+/* -- Component's: Common -- */
+.component_head + .component_body {
+  margin-top: 20px;
+}
+
+/* -- Component's: Search -- */
+.c-search {
+  form {
+    display: flex;
+
+    input {
+      $placeholderColor: #d0cece;
+
+      flex: 1;
+      margin-right: $gutter_grid;
+      min-width: 180px;
+      border-color: #e1e1e1;
+
+      //placeholder style
+      &::-webkit-input-placeholder {
+        color: $placeholderColor;
+      }
+      &::-moz-placeholder {
+        color: $placeholderColor;
+      }
+      &:-moz-placeholder {
+        color: $placeholderColor;
+      }
+      &:-ms-input-placeholder {
+        color: $placeholderColor;
+      }
+    }
+
+    .c__btn {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}
+
+/* -- Component's: Copyright -- */
+.c-copyright {
+  font: 13pt 'Oswald_regular', 'Arial', sans-serif;
+}
+
+/* -- Component's: Slogan -- */
+.c-slogan {
+  text-align: center;
+  font: 14pt 'Oswald_regular', 'Arial', sans-serif;
+  background: $color_primary-1;
+  color: #fff;
+  padding: $gutter_middle/2;
+  text-transform: uppercase;
+}
+
+/* -- Component's: Recommended articles -- */
+.c-recommended-articles {
+  background: #fff;
+
+  .image {
+    &, img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .summary {
+    padding: $gutter_middle/2;
+  }
+
+  .description {
+    margin-top: $gutter_middle/2;
+    flex: 1;
+
+    .text {
+      color: $color_text-gray;
+      font-size: 11pt;
+      margin: 20px 0 15px;
+    }
+  }
+
+
+  .c-big-date {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .headline {
+    display: block;
+    font: 18pt 'Oswald_bold', 'Arial', sans-serif;
+    margin-top: -6px;
+    margin-bottom: 9px;
+    text-decoration: none;
+    color: $color_primary-2;
+
+    &:hover {
+      text-shadow: 1px 1px 1px $color_primary-1;
+    }
+  }
+
+  .more {
+    line-height: 1;
+    a {
+      color: $color_text;
+      font: 12pt 'Oswald_regular', 'Arial', sans-serif;
+      text-decoration: none;
+      &:hover {
+        color: $color_primary-1;
+      }
+    }
+  }
+}
+
+/* -- Component's: Latest articles -- */
+.c-main-latest-articles {
+  .c-main-last-article__preview + .c-main-last-article__preview {
+    margin-top: $gutter_middle/2;
+  }
+}
+
+/* -- Component's: Upcoming events -- */
+.c-upcoming-evens {
+  .headline {
+    font: 20pt/1.2 'Oswald_bold', 'Arial', sans-serif;
+    color: $color_text;
+    text-decoration: none;
+    margin: -5px 0 15px;
+    display: block;
+
+    &:hover {
+      text-shadow: 1px 1px 1px $color_primary-1;
+    }
+  }
+
+  .image,
+  .image img {
+    display: block;
+    width: 100%;
+  }
+
+  .features {
+    padding: 10px $gutter_grid;
+    background: #fff;
+    border-bottom: $border_dashed;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1;
+
+    .more {
+      a {
+        font: 11pt/1 'Oswald_regular', 'Arial', sans-serif;
+        color: $color_text;
+        text-decoration: none;
+        &:hover {
+          color: $color_primary-1;
+        }
+      }
+    }
+  }
+
+  .ticket {
+    margin-top: 30px;
+
+    .title {
+      font: 18pt/1.2 'Oswald_bold', 'Arial', sans-serif;
+    }
+
+    .summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+  }
+}
+
+/* -- Component's: Top Pilots -- */
+.c-top-pilots {
+  width: 100%;
+
+  margin:(- $gutter_grid/2) (- $gutter_grid/2) 0 (- $gutter_grid/2) ;
+  .item {
+    padding: 0 $gutter_grid/2;
+    margin-top: $gutter_grid;
+  }
+}
+
+/* -- Component's:  Events -- */
+.c-events {
+  .item + .item {
+    margin-top: $gutter_middle/2;
+  }
+}
+
+/* -- Component's:  Results -- */
+.c-results {
+  .info {
+    font: 12pt/1 'Oswald_regular', 'Arial', sans-serif;
+    color: $color_text-gray;
+    margin-bottom: $gutter_middle;
+  }
+
+  .c-drop-list {
+    float: right;
+
+    .switch {
+      margin: 15px $gutter_middle 0 0;
+    }
+
+    .list {
+      margin-top: 6px;
+      padding-top: 37px;
+      width: 100%;
+    }
+  }
+
+  table {
+    font-size: 11pt;
+  }
+}
+
+/* -- Component's: Gallery   -- */
+.c-gallery {
+  padding: 0 $gutter_middle/2;
+
+  img{width: 100%}
+
+  .p__row {
+    margin-top: -($gutter_grid);
+  }
+
+  .item {
+    width: 100%;
+    margin-top: $gutter_grid;
+  }
+}
+
+/* -- Component's: Warning   -- */
+.c-warning {
+  text-align: center;
+  $svgSize: 60px;
+
+  svg {
+    width: $svgSize;
+    height: $svgSize;
+
+    .path1,
+    .path2 {
+      color: $color_text;
+    }
+
+    .path3 {
+      color: $color_primary-1;
+    }
+  }
+
+  .title {
+    font-size: 16pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $color_primary-1;
+    margin: 6px 0;
+  }
+}
+
+/* -- Component's : Latest articles  -- */
+.c-latest-articles {
+  img{
+    width: 100%;
+  };
+  .p__row {
+    margin-top: -($gutter_grid);
+  }
+  .item {
+    width: 100%;
+    margin-top: $gutter_grid;
+  }
+}
+
+/* -- Component's : Sorting  -- */
+.c-sorting {
+  form {
+    max-width: 100%;
+  }
+
+  .p__row {
+    align-items: center;
+    margin-top: -$gutter_grid;
+  }
+
+  .control {
+    width: 100%;
+    margin-top: $gutter_grid;
+
+    select {
+      min-width: 180px;
+    }
+
+    .widget {
+      display: inline-block;
+      & + .widget {
+        margin-left: $gutter_grid;
+      }
+    }
+  }
+}
+
+/* -- Component's: Common calendar setting  -- */
+%commonCalendar {
+  .last-race, .today, .today-race, .race {
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  .last-race span {
+    background: #d6d6d6;
+  }
+  .today span, .today-race span {
+    background: $color_primary-2;
+    color: #fff;
+  }
+
+  .today-race span {
+    position: relative;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 10px 10px 0;
+      border-color: transparent $color_primary-1 transparent transparent;
+    }
+  }
+
+  .race span {
+    background: $color_primary-1;
+    color: #fff;
+  }
+}
+
+/* -- Component's: Calendar  -- */
+.c-calendar {
+  background: #fff;
+  font-family: 'Oswald_regular', 'Arial', sans-serif;
+
+  .month {
+    text-align: center;
+    font-size: 18pt;
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+
+    .control {
+      $size: 20px;
+      & > * {
+        position: absolute;
+        width: $size;
+        height: $size;
+        top: 50%;
+        margin-top: -($size/2);
+      }
+
+      .c-left-arrow {
+        left: $gutter_grid*2;
+      }
+
+      .c-right-arrow {
+        right: $gutter_grid*2;
+      }
+    }
+  }
+
+  .days {
+    th, td {
+      padding: 10px 5px;
+      font-size: 12pt;
+    }
+
+    th {
+
+      &:nth-child(6),
+      &:nth-child(7) {
+        color: $color_primary-1;
+      }
+    }
+
+    td {
+
+      text-align: center;
+
+      span {
+        $size: 20px;
+        width: $size;
+        height: $size;
+        line-height: $size;
+      }
+    }
+  }
+  @extend %commonCalendar;
+
+  .other-month {
+    color: $color_text-gray;
+  }
+}
+
+/* -- Component's: Calendar legend  -- */
+.c-calendar-legend {
+  padding: ($gutter_middle - $gutter_grid) $gutter_middle $gutter_middle ($gutter_middle - $gutter_grid);
+  background: #fff;
+  font-family: 'Oswald_regular', 'Arial', sans-serif;
+  font-size: 14pt;
+  line-height: 1;
+
+  & > * {
+    display: inline-block;
+    margin: $gutter_grid 0 0 $gutter_grid;
+  }
+
+  span {
+    $size: 30px;
+    width: $size;
+    height: $size;
+    vertical-align: -9px;
+    margin-right: $gutter_grid;
+
+  }
+  @extend %commonCalendar;
+}
+
+/* -- Component's: Aside Upcoming events  -- */
+.c-aside-upcoming-evens {
+
+  border-bottom: $border_dashed;
+
+  .image,
+  .image img {
+    display: block;
+    width: 100%;
+  }
+
+  .headline {
+    font: 13pt/1.2 'Oswald_bold', 'Arial', sans-serif;
+    display: block;
+    color: #2e2e2e;
+    text-decoration: none;
+    margin: -3px 0 12px;
+    &:hover {
+      color: $color_primary-1;
+    }
+  }
+
+  .features,
+  .summary {
+    padding: 0 12px;
+    background: #fff;
+  }
+
+  .features {
+    margin: 12px 0;
+
+  }
+
+  .summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+  }
+
+  .more {
+    font-family: 'Oswald_bold', 'Arial', sans-serif;
+    font-size: 10pt;
+    a {
+      color: $color_text;
+      text-decoration: none;
+
+      &:hover {
+        color: $color_primary-1
+      }
+    }
+  }
+}
+
+/* -- Component's: Contact's  -- */
+.c-contacts {
+  .p-large__row{
+    margin-top: -$gutter_grid*2;
+  }
+
+  .contact__module {
+    width: 100%;
+    margin-top: $gutter_grid*2!important;
+  }
+}
+
+/* -- Component's: Partner's  -- */
+.c-partners {
+
+  img{
+    width: 100%;
+  }
+
+  .p__row {
+     margin-top: (-$gutter_grid);
+  }
+
+  .partner {
+    width: 50%;
+    margin-top: $gutter_grid;
+  }
+}

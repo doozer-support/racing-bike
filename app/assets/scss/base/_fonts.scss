@@ -1,0 +1,38 @@
+/* FONTS & ICONS */
+// Настройка шрифтов и иконок
+/*-------------------------------------*/
+// Fonts: Loading
+$fontNameBold: OswaldBold;
+$fontNameRegular: OswaldRegular;
+@font-face {
+  font-family: 'Oswald_bold';
+  src: url('../fonts/#{$fontNameBold}.eot');
+  src: url('../fonts/#{$fontNameBold}.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/#{$fontNameBold}.woff') format('woff'),
+  url('../fonts/#{$fontNameBold}.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Oswald_regular';
+  src: url('../fonts/#{$fontNameRegular}.eot');
+  src: url('../fonts/#{$fontNameRegular}.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/#{$fontNameRegular}.woff') format('woff'),
+  url('../fonts/#{$fontNameRegular}.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* SVG */
+/* -- Svg: Common -- */
+[class$="__ico"], [class*="__ico"] {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}

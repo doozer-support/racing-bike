@@ -1,0 +1,20 @@
+/* BASE */
+// Базовые настройки сайта.
+/*-------------------------------------*/
+// Base: HTML
+html{}
+
+// Настройки "условно" корневого элемента
+/* -- Base: BODY -- */
+body{
+  width: 100%;
+  max-width: 1920px;
+  min-width: $width_site-min;
+  position: relative;
+  font: 11pt/1.46 "Arial", sans-serif;
+  background: $color_body;
+}
+
+img{
+  max-width: 100%;
+}

@@ -1,0 +1,72 @@
+/* TYPOGRAPHY */
+// Настройка типографики
+/*-------------------------------------*/
+/* -- Typography: Headline -- */
+%headlineCommon{
+  font-family: 'Oswald_bold', 'Arial', sans-serif;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+h1 {
+  @extend %headlineCommon;
+  font-size: 26pt;
+}
+
+h2 {
+  @extend %headlineCommon;
+  font-size: 20pt;
+}
+
+h3 {
+  @extend %headlineCommon;
+  font-size: 16pt;
+}
+
+h4 {
+  @extend %headlineCommon;
+  font-size: 14pt;
+}
+
+h5 {
+  @extend %headlineCommon;
+  font-size: 13pt;
+}
+
+h6 {
+  @extend %headlineCommon;
+  font-size: 12pt;
+}
+
+/* -- Typography: Link's -- */
+a {
+  color: $color_primary-1;
+  transition: $transition-link;
+  &:hover {
+    color: darken($color_primary-1, 10%);
+  }
+}
+
+/* -- Typography: Paragraph -- */
+p {
+  margin: 0 0 18px
+}
+
+p:last-child {
+  margin-bottom: 0
+}
+
+
+b, strong {
+  font-weight: bold;
+  color: $color-text;
+}
+
+/* -- Typography: Lists's -- */
+ul > li:first-child, ol > li:first-child {
+  margin-top: 0;
+}
+ul ul, ul ol, ol ul, ol ol {
+  margin: .8em 0;
+  padding-left: 20px;
+}
