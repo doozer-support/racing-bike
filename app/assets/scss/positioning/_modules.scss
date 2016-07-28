@@ -1,0 +1,73 @@
+/* MODULE's */
+// Модульные позиции и сетки
+/*-------------------------------------*/
+/* -- Module's: Common -- */
+[class$="__module"], [class*="__module"] {
+}
+
+[class$="__module"] + [class$="__module"],
+[class*="__module"] + [class*="__module"] {
+  margin-top: 20px;
+}
+
+/* -- Module's: Grid -- */
+[class$="__row"], [class*="__row"] {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gutter_grid/2;
+  margin-right: -$gutter_grid/2;
+
+  > * {
+    width: auto;
+    padding-left: $gutter_grid/2;
+    padding-right: $gutter_grid/2;
+
+    & + [class$="__module"][class$="__module"],
+    & + [class*="__module"][class$="__module"] {
+      margin-top: 0;
+    }
+  }
+}
+
+/* -- Module's: Large grid -- */
+.p-large__row {
+  margin-left: -($gutter_grid);
+  margin-right: -($gutter_grid);
+
+  > * {
+    padding-left: $gutter_grid;
+    padding-right: $gutter_grid;
+  }
+}
+
+/* -- Module's: Headline -- */
+.module_headline-like.module_headline-like,
+.module_headline {
+  font: 12pt 'Oswald_bold', 'Arial', sans-serif;
+  margin: -7px 0 15px;
+  text-transform: uppercase;
+}
+
+.module_head + .module_body,
+.module_body + .module_foot{
+  margin-top: $gutter_middle;
+}
+
+/* -- Module's: logo -- */
+.p-logo__module{
+  width: 100%;
+  text-align: center;
+}
+
+/* -- Module's: Menu -- */
+.p-menu__module{
+   width: 100%;
+  text-align: center;
+}
+
+/* -- Module's: Top Pilot's -- */
+.p-top-pilots__module{
+  .module_foot{
+    text-align: center;
+  }
+}

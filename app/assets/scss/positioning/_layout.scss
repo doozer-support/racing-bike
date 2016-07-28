@@ -1,0 +1,25 @@
+/* LAYOUT's */
+// Настройки макетов
+/*-------------------------------------*/
+/* -- Layout: Common setting -- */
+[class$="__layout"] {
+  display: flex;
+
+  // Настройки главной колонки
+  & > .p-main__col {
+    flex: 1;
+  }
+
+  // Настройки боковых колонок
+  & > [class$="__aside-col"] {}
+}
+
+/* -- Layout: Right Column -- */
+.p-right-col__layout {
+
+  // Настройки правой колонок
+  & > .p-right__aside-col {
+    width: 25%;
+    margin-left: $gutter_layout;
+  }
+}

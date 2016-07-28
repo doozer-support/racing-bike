@@ -1,0 +1,44 @@
+/* CORRECTION */
+// Уточнения
+/*-------------------------------------*/
+/* -- Correction: Color's -- */
+.s-color-primary{
+  color: $color_primary-1;
+}
+
+/* -- Correction: Text -- */
+.s-text-center{
+  text-align: center;
+}
+
+/* -- Correction: Responsive Video -- */
+.s-responsive__video {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+  width: 100%;
+  display: block;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* -- Correction: Content -- */
+.s-float-left__content  {
+  float: left;
+  padding-right: $gutter_grid*2;
+}
+/* -- Correction: FLex table -- */
+.s-flex-table {
+  width: 100%;
+  overflow-y: auto;
+  table{
+    min-width:600px;
+  }
+}

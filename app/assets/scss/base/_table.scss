@@ -1,0 +1,36 @@
+/* TABLE */
+// Настройка Таблиц
+/*-------------------------------------*/
+// Table: Common
+table{
+  width: 100%;
+  font: 14pt/1.2 'Oswald_regular', 'Arial', sans-serif;
+  border-collapse: collapse;
+  text-align: center;
+}
+td, th{
+  padding: 8px;
+  font-weight: normal;
+}
+
+thead{
+  th{
+    background: $color_primary-2;
+    color: #fff;
+    border-bottom: 4px solid $color_primary-1;
+  }
+}
+tbody{
+  tr:nth-child(2n){
+    background: #fff;
+  }
+}
+
+table.clear__table{
+  tbody{
+    tr:nth-child(2n){
+      background: transparent;
+    }
+  }
+  text-align: left;
+}

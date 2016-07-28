@@ -1,0 +1,230 @@
+/* PAGE's COMPONENT */
+// Настройка страниц-компонентов
+/*-------------------------------------*/
+/* -- Page's Component's: Pilot -- */
+.c-pilot {
+
+  .p-pilot-a,
+  .p-pilot-b{
+    flex: 1 1 100%;
+  }
+  .p-pilot-b {
+    margin-top: $gutter_grid
+  }
+
+  .detail {
+    & > * + * {
+      margin-top: $gutter_middle/2
+    }
+
+    .title {
+      font: 15pt/1 'Oswald_regular', 'Arial', sans-serif;
+      text-transform: uppercase;
+    }
+
+    .c-medals {
+      $size: 30px;
+
+      svg {
+        width: $size;
+        height: $size;
+      }
+    }
+  }
+
+  table {
+    font-size: 11pt;
+
+    td:nth-child(2) {
+      text-align: right;
+      color: $color_text-gray;
+    }
+  }
+
+  .actions {
+    a {
+      display: block;
+      text-align: center;
+
+      & + a {
+        margin-top: 12px;
+      }
+
+    }
+  }
+}
+
+/* -- Component's: Video -- */
+.c-video {
+  .p__row {
+    margin-top: -($gutter_grid);
+  }
+  .item {
+    width: 100%;
+    margin-top: $gutter_grid;
+  }
+}
+
+/* -- Component's: Gallery album's -- */
+.c-gallery-albums {
+
+  img{
+    width: 100%;
+  }
+
+  .p__row {
+    margin-top: -($gutter_grid);
+  }
+
+  .item {
+    width: 100%;
+    margin-top: $gutter_grid;
+  }
+}
+
+/* -- Component's: Articles -- */
+.c-articles {
+  padding: 0 $gutter_middle/2;
+  background: #fff;
+
+  & > * {
+    padding: $gutter_middle/2 0;
+  }
+}
+
+/* -- Component's: Article -- */
+.c-article {
+  background: #fff;
+  border-bottom: $border_dashed;
+
+  .component_head,
+  .component_body {
+    padding: 0 $gutter_middle/2;
+  }
+
+  .component_head{
+    padding-top: $gutter_middle/2;
+  }
+
+  .component_head .p-large__row  > .elem {
+    padding-top: 20px;
+    width: 100%;
+
+    .c-big-date{
+      text-align: center;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  .component_body {
+    padding-bottom:$gutter_middle/2;
+  }
+
+  .headline {
+    font: 22pt/1.2 'Oswald_bold', 'Arial', sans-serif;
+    margin-top: -6px;
+  }
+
+  .c-tags {
+    margin-top: 12px;
+  }
+
+  .controls {
+    flex: 1;
+    text-align: right;
+    display: none;
+  }
+
+  .author{
+    font: 12pt 'Oswald_regular', 'Arial', sans-serif;
+    color: $color_text-gray;
+    text-align: right;
+  }
+}
+
+/* -- Component's: Event -- */
+.c-event {
+     .image,
+     .image img {
+       display: block;
+       width: 100%;
+     }
+
+     .p-event-a
+     .p-event-b{
+       width: 100%;
+     }
+
+     .p-event-b {
+       margin-top: $gutter_middle;
+     }
+
+  .detail {
+    & > * + * {
+      margin-top: 24px;
+    }
+
+    .title {
+      font: 15pt/1 'Oswald_regular', 'Arial', sans-serif;
+      text-transform: uppercase;
+    }
+
+    .c-date {
+      font: 11pt/1 'Oswald_bold', 'Arial', sans-serif;
+      color: $color_text;
+      svg {
+        width: 16px;
+        height: 16px;
+        fill: $color_primary-1;
+        vertical-align: -2px;
+        margin-right: 5px;
+      }
+    }
+
+    .actions {
+      margin-top: 35px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
+  .c-warning {
+    margin-top: 50px;
+  }
+}
+/* -- Component's: Pilots -- */
+.c-pilots{
+  .table{
+    .photo{
+      width: 120px;
+      text-align: center;
+   };
+
+    img{
+      display: inline-block;
+      max-width: 60px;
+      max-height: 60px;
+      vertical-align: middle;
+    }
+
+    td, th {
+      padding: 6px 12px;
+    }
+  }
+}
+
+//Component's: Race calendar
+.c-race-calendar{
+  .p-race-calendar-a,
+  .p-race-calendar-b {
+    width: 100%;
+  }
+
+  .p-race-calendar-b{
+    margin-top: $gutter_grid;
+  }
+}

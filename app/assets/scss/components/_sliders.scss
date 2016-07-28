@@ -1,0 +1,78 @@
+/* COMPONENT's SLIDER's */
+// Слайдера
+/*-------------------------------------*/
+/* -- Slider's: Common -- */
+[class$="__slider"], [class*="__slider"] {
+  position: relative;
+
+  .slider,
+  .slide {
+    height: inherit;
+  }
+}
+
+/* -- Slider's: Showcase -- */
+.c-showcase__slider {
+  $controlPadding: 10px;
+
+  .slider-controls {
+    display: none;
+  }
+
+  .slider-controls > * {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+
+    &.c-left-arrow {
+      left: $controlPadding;
+    }
+
+    &.c-right-arrow {
+      right: $controlPadding;
+    }
+
+    svg {
+      fill: #fff;
+    }
+
+    &:hover {
+      svg {
+        fill: $color_primary-1;
+      }
+    }
+  }
+
+  .slide {
+    display: flex;
+    align-items: center;
+  }
+
+  .summary {
+    position: absolute;
+    left: 8%;
+    max-width: 500px;
+    padding: 0 $gutter_grid;
+    color: #fff;
+  }
+
+  .headline {
+    font: 24pt 'Oswald_bold', 'Arial', sans-serif;
+    color: $color_primary-1;
+  }
+
+  .description {
+    font: 12pt 'Oswald_regular', 'Arial', sans-serif;
+  }
+
+  &[data-nav="visible"] {
+    .slider-controls {
+      display: block;
+    }
+  }
+}
+
+/* -- Slider's: Article -- */
+.c-article__slider{
+   display: none;
+}

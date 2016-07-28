@@ -1,0 +1,145 @@
+/* TEMPLATE */
+// Настройка глобальных обьектов
+/*-------------------------------------*/
+/* -- Container -- */
+.gl-container {
+  max-width: $width_container;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+/* -- Panel's: Common -- */
+[class$="__panel"], [class*="__panel"] {
+  &:nth-last-child(2){
+    padding-bottom: 0!important;
+  }
+}
+
+/* -- Panel's: Headline -- */
+.panel_headline{
+  font: 30pt/1 'Oswald_bold', 'Arial', sans-serif;
+  margin-bottom: 40px;
+}
+
+/* -- Panel's: Top -- */
+.gl-top__panel {
+  background: $color_primary-1;
+  padding: 6px 0;
+  color: #fff;
+
+  a {
+    color: #fff;
+  }
+  .p__row {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* -- Panel's: Header -- */
+.gl-header__panel {
+  padding: 15px 0 5px;
+  background: $color_bg-light;
+  border-bottom: $border_dashed;
+
+  .p-menu__module {
+
+
+       .p__row {
+         &:first-child {
+           display: none;
+           justify-content: flex-end;
+         }
+         & + .p__row {
+           margin-top: 24px;
+         }
+       }
+     }
+
+  .p-main-menu__module {
+    width: 100%;
+  }
+
+  .p__row {
+    justify-content: space-between;
+  }
+}
+/* -- Panel's: Footer -- */
+.gl-footer__panel {
+  background: $color_primary-2;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 70px;
+}
+
+/* -- Panel's: Content -- */
+.gl-partners__panel,
+.gl-contacts__panel,
+.gl-gallery__panel,
+.gl-content__panel{
+  .gl-container{
+    max-width: 1280px;
+    padding: 0 20px;
+  }
+}
+
+/* -- Panel's: Index panels -- */
+/* -- Common -- */
+%indexPanelPadding{
+  padding: 30px 0;
+}
+
+/* -- Index showcase -- */
+.gl-showcase__panel{
+   @extend  %indexPanelPadding;
+  display: none;
+
+   border-bottom: $border_dashed;
+   background: #fff;
+}
+
+/* -- Index info -- */
+.gl-table__panel,
+.gl-info__panel{
+  @extend  %indexPanelPadding;
+
+  .p__row{
+    justify-content: space-between;
+
+    [class$="__module"] + [class$="__module"],
+    [class*="__module"] + [class*="__module"]{
+      margin-top: $gutter_grid*2;
+    }
+
+     & > * {
+       flex: 1 1 100%;
+     }
+  }
+}
+
+// Panel's: Pilot's
+.gl-top-pilots__panel{
+  padding: 70px 0;
+  background: url('../images/asphalt.jpg') 0 0 repeat;
+
+  .panel_headline{
+    color: #fff;
+  }
+}
+
+/* -- Panel's: Pilot's -- */
+.gl-table__panel{
+}
+
+/* -- Panel's: Gallery -- */
+.gl-gallery__panel{
+  @extend  %indexPanelPadding;
+}
+
+/* -- Panel's: Contact's -- */
+.gl-contacts__panel{
+  @extend  %indexPanelPadding;
+}
+
+/* -- Panel's: Partner's -- */
+.gl-partners__panel{}

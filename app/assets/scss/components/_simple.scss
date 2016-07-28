@@ -1,0 +1,445 @@
+/* COMPONENT's SIMPLE */
+// Простые компоненты
+/*-------------------------------------*/
+/* -- Simple's: Social -- */
+$socialSize: 32px;
+
+%socialPlaceholder {
+  $svgSize: $socialSize*0.65;
+
+  width: $socialSize;
+  height: $socialSize;
+  background: #4d7098;
+  text-align: center;
+  line-height: 42px;
+  transition: all 50ms;
+
+  svg {
+    display: inline-block;
+    width: $svgSize;
+    height: $svgSize;
+    fill: #fff;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* - Social: VK - */
+.c-social__vk {
+  @extend %socialPlaceholder;
+  background: #4d7098;
+}
+
+/* - Social: Facebook - */
+.c-social__facebook {
+  @extend %socialPlaceholder;
+  background: #3d5a98;
+}
+
+/* - Social: Instagram - */
+.c-social__instagram {
+  @extend %socialPlaceholder;
+  background: #306a92;
+}
+
+/* - Social: You tube - */
+.c-social__youtube {
+  @extend %socialPlaceholder;
+  background: #ce1616;
+
+  svg {
+    $svgSize: $socialSize*0.75;
+    width: $svgSize;
+    height: $svgSize;
+  }
+}
+
+/* -- Simple's: Medals -- */
+.c-medals {
+  $size: 20px;
+  & > * {
+    display: inline-block;
+
+    & + * {
+      margin-left: 2px;
+    }
+  }
+
+  svg {
+    width: $size;
+    height: $size;
+  }
+
+  .gold_medal {
+    svg {
+      fill: #ffcd02;
+    }
+  }
+
+  .silver_medal {
+    svg {
+      fill: #ababaa;
+    }
+  }
+
+  .bronze_medal {
+    svg {
+      fill: #bf7c2c;
+    }
+  }
+}
+
+// Component's: Files
+.c-files {
+  line-height: 1;
+  & > * {
+    display: inline-block;
+    width: 43px;
+    height: 56px;
+    background: url(../images/files.png) 0 0 no-repeat;
+
+    & + * {
+      margin-left: 12px;
+    }
+
+  }
+  .doc.doc{
+     background-position: -43px 0;
+  }
+}
+
+/* -- Simple's: Arrows -- */
+%arrowPlaceholder {
+  $size: 30px;
+
+  line-height: 1;
+  display: inline-block;
+  cursor: pointer;
+  width: $size;
+  height: $size;
+
+  svg {
+    width: inherit;
+    height: inherit;
+    fill: $color_primary-2;
+    transition: $transition-link;
+  }
+
+  &:hover {
+    svg {
+      fill: $color_primary-1;
+    }
+  }
+}
+
+/* - Arrows: Left - */
+.c-left-arrow {
+  @extend %arrowPlaceholder
+}
+
+/* - Arrows: Right - */
+.c-right-arrow {
+  @extend %arrowPlaceholder
+}
+
+/* -- Simple's: Location -- */
+.c-location {
+  $svgWidth: 20px;
+  $svgHeight: 20px;
+  font: 11pt/1.2 'Oswald_bold', 'Arial', sans-serif;
+  position: relative;
+  padding-left:$svgWidth + 3px;
+
+  svg {
+    width: $svgWidth;
+    height: $svgHeight;
+    fill: $color_primary-1;
+    position: absolute;
+    top: -2px;
+    left:-3px;
+  }
+}
+
+/* -- Simple's: Date -- */
+.c-date {
+  $svgSize: 13px;
+  $color: $color_text-gray;
+
+  font-size: 10pt;
+  line-height: 1;
+  color: $color;
+
+  svg {
+    width: $svgSize;
+    height: $svgSize;
+    fill: $color;
+    vertical-align: -1px;
+  }
+
+  & > * {
+    display: inline-block;
+  }
+}
+
+/* -- Simple's: Big date -- */
+.c-big-date {
+  text-align: right;
+
+  .month {
+    font: 14pt/1 'Oswald_bold', 'Arial', sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+  }
+  .day {
+    font: 50pt/1 'Rubik One', sans-serif;
+  }
+}
+
+/* -- Simple's: Tags -- */
+.c-tags {
+  font: 8pt/1 'Oswald_regular', 'Arial', sans-serif;
+  margin: (-$gutter_grid/3) 0 0 (-$gutter_grid/3);
+
+  & > * {
+    display: inline-block;
+    margin: ($gutter_grid/3) 0 0 ($gutter_grid/3);
+    background: $color_primary-1;
+    color: #fff;
+    padding: 4px 10px 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  a {
+    &:hover {
+      background: $color_primary-2;
+      color: #fff;
+    }
+  }
+}
+
+/* -- Simple's: Photo counter -- */
+.c-photo-counter {
+  font: 12pt/1 'Oswald_regular', 'Arial', sans-serif;
+  svg {
+    $size: 15px;
+    width: $size;
+    height: $size;
+    display: inline-block;
+    vertical-align: -1px;
+    margin-right: 3px;
+  }
+}
+
+/* -- Simple's: Article's features  -- */
+.c-article-features {
+  line-height: 1;
+  margin: -5px 0 0 (-$gutter_grid);
+
+  .feature {
+    display: inline-block;
+    margin: 5px 0 0 $gutter_grid;
+  }
+
+  .author {
+    font: 11pt 'Oswald_regular', 'Arial', sans-serif;
+    color: $color_text-gray;
+  }
+}
+
+/* -- Simple's: Likes  -- */
+.c-likes {
+  $svgSize: 14px;
+
+  text-align: center;
+  padding: 2px 0;
+  line-height: 1;
+  border-top: $border_dashed;
+  border-bottom: $border_dashed;
+  font: 10.5pt 'Oswald_regular', 'Arial', sans-serif;
+
+  & > * {
+    color: $color_text;
+    text-decoration: none;
+    display: inline-block;
+
+    & + * {
+      margin-left: $gutter_grid;
+    }
+
+    svg {
+      width: $svgSize;
+      height: $svgSize;
+      fill: #dbdbdb;
+      vertical-align: -2px;
+      transition: fill 150ms;
+      margin-left: 3px;
+    }
+  }
+
+  a:hover {
+    svg {
+      fill: $color_primary-1;
+    }
+  }
+}
+
+//- Component's: Drop list
+.c-drop-list {
+  position: relative;
+  font-family: 'Oswald_regular', 'Arial', sans-serif;
+
+  .switch {
+    line-height: 1;
+    font-size: 11pt;
+    display: inline-block;
+    cursor: pointer;
+
+    .result {
+      color: $color_primary-1;
+    }
+
+    .arrow {
+      $size: 7px;
+      margin: 0 5px;
+
+      svg {
+        margin-top: -3px;
+        width: $size;
+        height: $size;
+      }
+    }
+  }
+
+  .list {
+    font-size: 10pt;
+    position: absolute;
+    padding: 12px;
+    margin: 5px 0 0 0;
+    list-style: none;
+    color: #fff;
+    background: $color_primary-2;
+
+    li {
+      text-align: center;
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: $transition-link;
+      &:hover {
+        color: $color_primary-1;
+      }
+    }
+  }
+}
+
+/* -- Component's:  Tabs -- */
+.c-tabs {
+  .control {
+    $height: 40px;
+    background: #fff;
+
+    .item {
+      display: inline-block;
+      font: 12pt 'Oswald_regular', 'Arial', sans-serif;
+      padding: 0 $gutter_middle;
+      height: $height;
+      line-height: $height + 1;
+      cursor: pointer;
+      transition: $transition-link;
+
+      &:hover {
+        color: $color_primary-1
+      }
+    }
+
+    [data-state="selected"] {
+      background: #999898;
+      color: #fff;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+/* -- Simple's: Main menu switch -- */
+
+.c-main-menu__switch{
+  $size: 24px;
+  height: $size;
+  cursor: pointer;
+
+  svg{
+    width: $size;
+    height: $size;
+    fill: #fff;
+  }
+
+  &[data-state="selected"]{
+    svg{
+      fill:$color_text
+    }
+  }
+
+}
+
+/* -- Simple's: Button's -- */
+$btnSize: 38px;
+[class$="__btn"], [class*="__btn"] {
+  height: $btnSize;
+
+  padding-left: 30px;
+  padding-right: 30px;
+  font: 12pt 'Oswald_regular', 'Arial', sans-serif;
+  line-height: $btnSize+1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+  background: $color_primary-1;
+  color: #fff;
+  transition: $transition-btn;
+  cursor: pointer;
+  display: inline-block;
+
+  &:hover {
+    background: darken($color_primary-1, 3%);
+    color: #fff;
+  }
+
+  &:active {
+    box-shadow: inset 0 0 10px rgba(50, 50, 50, .5);
+  }
+
+  &:focus {
+    outline: transparent;
+  }
+}
+
+/* -- Simple's: Clear button's -- */
+.c-clear__btn,
+.c-black-clear__btn,
+.c-white-clear__btn {
+  background: transparent;
+  border: 1px solid $color_primary-1;
+  color: $color_primary-1;
+}
+
+.c-white-clear__btn{
+  color: #fff;
+  border-color: #fff;
+  &:hover{
+    background: #fff;
+    color: #000;
+  }
+}
+
+.c-black-clear__btn{
+  color: #000;
+  border-color: #000;
+  &:hover{
+    background: #000;
+    color: #fff;
+  }
+}
